@@ -4,10 +4,10 @@
 using namespace std;
 
 int main(){
-  int a;
+  string a;
   cout<<"What is your name? \n";
   cin>>a;
-  cout<< "Hello!!!!!"<<endl;
+  cout<< "Hello "<<a<<endl;
   // Other types include
   //Short int: At least 16 bits
   // Long int: At least 32 bits
