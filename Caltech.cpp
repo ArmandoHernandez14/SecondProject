@@ -1,22 +1,24 @@
 #include<iostream>
 #include<string>
 using namespace std;
+// A constructor is a function that get's called upon, as soon as you create an object
 class Armando{//People make classes in order to group similar functions
 public:
+  Armando(string z){
+    setName(z);
+  }
   void setName(string x){
-    XBOXONEKNIGHT=x;
+    Brett=x;
   }
   string getName(){
-    return XBOXONEKNIGHT;
+    return Brett;
   }
 private:
-  string XBOXONEKNIGHT;
-
+  string Brett;
 };
 
 int main(){
- Armando Scientist;
- Scientist.setName("Dr.Hernandez");
- cout<<Scientist.getName();
+ Armando XBOXONEKNIGHT("Lucky Bucky Roberts");
+ cout<< XBOXONEKNIGHT.getName();
   return 0;
 }
