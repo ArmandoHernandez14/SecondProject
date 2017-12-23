@@ -1,15 +1,22 @@
 #include<iostream>
-
+#include<string>
 using namespace std;
 class Armando{//People make classes in order to group similar functions
- public:// Public is an access specifier
-  void coolSaying(){
-    cout<<"Dr.Hernandez is cool"<<endl;
+public:
+  void setName(string x){
+    XBOXONEKNIGHT=x;
   }
+  string getName(){
+    return XBOXONEKNIGHT;
+  }
+private:
+  string XBOXONEKNIGHT;
+
 };
 
 int main(){
- Armando Scientist;// Scientist is the object which you'll need in order to access/use your class
-Scientist.coolSaying();
+ Armando Scientist;
+ Scientist.setName("Dr.Hernandez");
+ cout<<Scientist.getName();
   return 0;
 }
