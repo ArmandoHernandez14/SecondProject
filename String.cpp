@@ -12,7 +12,6 @@ int main() {
    gross_pay = rate * 40 + 1.5 * rate * (hours-40);
    else
    gross_pay = rate * hours;
-
     cout.setf(ios::fixed);
     cout.setf(ios::showpoint);
     cout.precision(2);
