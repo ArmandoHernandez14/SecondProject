@@ -8,11 +8,10 @@ int main() {
  // these are distinct
   // int tuna = 6;
   // cout<<tuna;
- int a =6;
- int b = 4;
- int sum = a-b;
-
- cout<<sum;
+int x = 8;
+int y = 10;
+int sum= x+y;
+cout<<sum;
 
   return 0;
 }
