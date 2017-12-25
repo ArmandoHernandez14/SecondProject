@@ -13,7 +13,7 @@ int total = 0;
    total = total + number;
    bacon++;
  }
-cout<<"Your total is "<< total<<endl;
+cout<<"Your total is "<< total <<endl;
 
   return 0;
 }
