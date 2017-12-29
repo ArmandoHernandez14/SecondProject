@@ -34,7 +34,9 @@ int main(){
  cin>>m;
  cout<<"Tenth number"<<endl;
  cin>>s;
-
+cout.setf(ios::fixed);
+cout.setf(ios::showpoint);
+cout.precision(2);
  cout<<"Your numbers are "<<x<<','<<y<<','<<p<<','<<q<<','<<e<<','<<g<<','<<b<<','<<z<<','<<m<<','<<"and "<<s<<'.'<<endl;
 
   return 0;
