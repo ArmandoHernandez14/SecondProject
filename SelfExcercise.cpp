@@ -3,11 +3,10 @@
 using namespace std;
 
 int main(){
- double x;
- cout<<"How many gallons?"<<endl;
- cin>>x;
- const double liters=3.78533*x;
- cout<<"This is how many liters you have "<<liters<<endl;
+  int count=10;
+for (size_t i = 0; i <= count; i++) {
+  cout<<"Dr.Hernandez is the Cutest Future Scientist\n";
+}
 
   return 0;
 }
