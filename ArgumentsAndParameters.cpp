@@ -1,10 +1,39 @@
 #include<iostream>
+#include<string>
+
 using namespace std;
-int volume(int l, int w, int h);
+
 int main(){
- cout<<volume(3,6,7);//Where telling it to print the function volume.
+  int swapHolder=-1;
+ int DrHernandez[]={44,9,237,1,5,44,534,17,21,819};
+ for (int PMC = 0; PMC < 10; PMC++) {
+  if (DrHernandez[PMC]>DrHernandez[PMC+1]) {
+   swapHolder=DrHernandez[PMC+1];
+   DrHernandez[PMC+1]=DrHernandez[PMC];
+   DrHernandez[PMC]=swapHolder;
+  }
+ }
+  for(int PMC = 0; PMC < 10; PMC++) {
+     if (DrHernandez[PMC]>DrHernandez[PMC+1]) {
+       swapHolder=DrHernandez[PMC+1];
+      DrHernandez[PMC+1]=DrHernandez[PMC];
+      DrHernandez[PMC]=swapHolder;
+     }
+}
+for(int PMC = 0; PMC < 10; PMC++) {
+   if (DrHernandez[PMC]>DrHernandez[PMC+1]) {
+     swapHolder=DrHernandez[PMC+1];
+    DrHernandez[PMC+1]=DrHernandez[PMC];
+    DrHernandez[PMC]=swapHolder;
+   }
+}
+for(int PMC = 0; PMC < 10; PMC++) {
+   if (DrHernandez[PMC]>DrHernandez[PMC+1]) {
+     swapHolder=DrHernandez[PMC+1];
+    DrHernandez[PMC+1]=DrHernandez[PMC];
+    DrHernandez[PMC]=swapHolder;
+   }
+      cout<<DrHernandez[PMC]<<", ";
+}
   return 0;
-}//Where making a function here that has the integers l,w,and h. Then we tell it to return the length*Width*Height.
-int volume(int l, int w, int h){
-  return l*w*h;
 }

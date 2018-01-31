@@ -3,9 +3,10 @@
 using namespace std;
 //Function that something wrong can happen
 void mightGoWrong(){
-  bool error=true;
+  bool error1=true;
+  bool error2=true;
 
-  if (error) {
+  if (error1) {
     throw "Something went wrong.";
   }
 }

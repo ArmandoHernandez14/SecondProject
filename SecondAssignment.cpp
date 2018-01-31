@@ -5,8 +5,8 @@ using namespace std;
 int main(){
  //const int x;
 
- int l;
- int a;
+ int x;
+ int y;
  int p;
  int q;
  int e;
@@ -15,14 +15,14 @@ int main(){
  int z;
  int m;
  int s;
- int numbers[10]={l,a,p,q,e,g,b,z,m,s};
+ int numbers[10]={x,y,p,q,e,g,b,z,m,s};
  bool ordered=false;
  int n=0,k=0,x=0,y=0;
 
  cout<<"First number\n";
-  cin>>l;
+  cin>>x;
   cout<<"Second number\n";
-  cin>>a;
+  cin>>y;
   cout<<"Third number"<<endl;
   cin>>p;
   cout<<"Fourth number"<<endl;
@@ -39,11 +39,8 @@ int main(){
   cin>>m;
   cout<<"Tenth number"<<endl;
   cin>>s;
-
-
-
-  while (ordered=false) {
-  for(n=0; n<6;n++){
+while (ordered=false) {
+  for(n=0; n<10;n++){
   if(numbers[n]>numbers[n+1]){
         x=numbers[n+1];
         y=numbers[n];
