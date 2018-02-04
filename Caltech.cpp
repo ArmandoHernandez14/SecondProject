@@ -3,7 +3,7 @@
 using namespace std;
 // A constructor is a function that get's called upon, as soon as you create an object
 class Armando{//People make classes in order to group similar functions
-public:
+public://Access specifier
   Armando(string z){
     setName(z);
   }
