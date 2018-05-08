@@ -1,27 +1,26 @@
 #include<iostream>
-#include<string>
 
 using namespace std;
 //Declared Function
  class Car{
  public:
-  int x=2;
-  int y=2;
-  int z=1;
- void speed();
- void increase_speed();
+//  int x=2;
+//  int y=2;
+//  int z=1;
+ void speed(int x);
+ //void increase_speed(int& y);
  };
 
 //:: is the scope resolution opertor
  int main(){
  Car Greg;//I'm declaring that I want to use class Car, and then the object Armando
- Greg.speed();//Output 0
- Greg.increase_speed();//Increase speed by +6
+ Greg.speed(0);//Output 0
+ Greg.speed(6);//Increase speed by +6
  Greg.speed();//Output 6
  }
-void Car::speed(){
+void Car::speed(int x){
   cout<<x<<endl;
 }
- void Car::increase_speed(){
- x=y+x+z;
- }
+ // void Car::increase_speed(int& y){
+ //
+ // }
