@@ -19,8 +19,8 @@ cin>>weight;
  BrettMccausland Student_1(name,height,weight);//if you want to use the overload constructor throw in parenthesis and put name,height,weight
 
 cout<<endl<<"Patient Name: "<<Student_1.getName()<<endl<<
-"Height: "<<Student_1.getHeight()<<endl<<
-"Weight: "<<Student_1.getWeight()<<endl;
+"Height: "<<Student_1.getHeight()<<" inches"<<endl<<
+"Weight: "<<Student_1.getWeight()<<" lbs"<<endl;
 system("Pause");
 cout<<endl;
 BrettMccausland Student_2;
