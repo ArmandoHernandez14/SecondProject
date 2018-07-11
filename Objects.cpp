@@ -38,10 +38,9 @@ void First();
 
 int main(){
  //First();
- Stack b;//Creates object
- b.push("s");//Puts this as it's Data
- b.pop();
- cout<< b.pop() <<endl;
+ //Stack b;//Creates object
+ //b.push("s");//Puts this as it's Data
+ //b.pop();
   //Next();
   //NewNode();
   //Bob();
@@ -73,15 +72,22 @@ switch (end) {
 
 void PrintLL(){
   Set p=h;
-   while (p) {
-     if(p == h){
-     cout<<"   Your Linked List is "<<p->Data<<",";
+  if(p == NULL){
+    cout<<"Nothing in linked list!"<<endl;
+  }while (p != NULL){
+     if(p == h && p->Next == NULL){
+       cout<<"Your Linked List contains "<<p->Data;
+       break;
+     }else if(p == h && p->Next != NULL){
+     cout<<"   Your Linked List contains "<<p->Data<<",";
      p=p->Next;
-   }if (p->Next == NULL) {
-     cout<<p->Data;
-   }
-    else{cout<<p->Data<<",";}//Printing it out the data integer
+   }if (p->Next == NULL && p->Next != h) {
+     cout<<"and "<<p->Data;
+     p = p->Next;
+   }else{
+     cout<<p->Data<<",";//Printing it out the data integer
      p=p->Next;//Pointing towards the next Node
+   }
    }
 }
 void insert(int& user_data){

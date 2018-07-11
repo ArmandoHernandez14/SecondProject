@@ -53,7 +53,7 @@ void Delete_Node(){
   before= h;
   cout<<"Enter value you wish to be deleted: ";
   cin>>target;
-  while (discard->data != target) {
+  while(discard->data != target){
     discard = discard->next;
   }if (before != discard) {
   while (before->next != discard) {
@@ -65,6 +65,9 @@ void Delete_Node(){
    before= h;
    discard->next = NULL;
    delete discard;
+ }
+ else{
+  cout << "Value doesn't exist, please try Again" << '\n';
  }
 }
 
