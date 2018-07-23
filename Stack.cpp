@@ -30,7 +30,7 @@ int main(){
 Stack A;//Creating an object called A
 A.Push("s");//Making a node, that holds the string "s"
 A.Print();//I'm then going to print out the item in the stack
-cout<<"Going to pop\n";//Telling the user what's happening
+cout<<"Going to pop\n";//Telling the user what's going to happen
 A.Pop();//I then remove the node from the stack
 cout<<"\nAfter Popping\n";
 A.Print();//Print out what's left in the stack
@@ -90,6 +90,9 @@ void Stack::Pop(){
 
 void Stack::Print(){
   Node* p = stackPtr;
+  if(p == NULL){
+    cout<<"\nNothing in Stack"<<endl;
+  }
   while (p != NULL) {
     ReadItem(p);
     p= p->next;
