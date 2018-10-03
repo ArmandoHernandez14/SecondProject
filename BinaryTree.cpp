@@ -1,5 +1,6 @@
 #include<iostream>
 #include<cmath>
+#include<cstring>
 //Still not complete
 using namespace std;
 
@@ -34,7 +35,7 @@ void Tree::insert(int user_data){
 }
 
 void Tree::AddNodePrivate(int user_data){
-  if(root == NULL){///This if statement is complete
+  if(root == NULL){
   root = new Node;
   root->data = user_data;
   root->left_side=NULL;
@@ -79,27 +80,51 @@ void Tree::print(node x){
 
 void Tree::privateprint(node Ptr){
   if(Ptr == NULL){cout<<"Nothing in Binary Tree!"<<endl;}//If the Binary Tree is empty
-  if(Ptr->left_side == NULL && Ptr->right_side == NULL){//Step 2
-    //If the Binary Tree only contains one Node
-  }else{
-       if(Ptr->left_side != NULL){//Step 1
-         Ptr=(*Ptr).left_side;
-         privateprint(Ptr);
-         cout<<(*Ptr).data<<endl;
-       }if(Ptr->right_side != NULL){//Step 3
-         Ptr = (*Ptr).right_side;
-         privateprint(Ptr);
-         cout<<Ptr->data<<endl;
-       }else{
-         cout<<Ptr->data<<endl;
-       }
-}}
+  else{
+    if(Ptr->left_side == NULL && Ptr->right_side == NULL && Ptr == root){
+      cout<<(*Ptr).data<<endl;
+    }else if(Ptr->left_side != NULL){
+      Ptr=Ptr->left_side;
+      privateprint(Ptr);
+      if(Ptr->right_side != NULL){
+        Ptr=Ptr->right_side;
+        privateprint(Ptr);
+      }
+    }else if(Ptr->right_side != NULL){
+      Ptr=Ptr->right_side;
+      privateprint(Ptr);
+      if(Ptr->left_side != NULL){
+        Ptr=Ptr->left_side;
+        privateprint(Ptr);
+      }
+    } cout<<(*Ptr).data<<endl;
+  }
+//   if(Ptr->left_side == NULL && Ptr->right_side == NULL){//Step 2
+//     //If the Binary Tree only contains one Node
+//     if(Ptr==root){
+//       cout<<(*Ptr).data<<endl;
+//     }
+//   }else{
+//        if(Ptr->left_side != NULL){//Step 1
+//          Ptr=(*Ptr).left_side;//Go to the left
+//          privateprint(Ptr);//Then call itself
+//          cout<<(*Ptr).data<<endl;//Then later, print the data in the node
+//          if(Ptr->right_side != NULL){
+//            Ptr=(*Ptr).right_side;
+//            privateprint(Ptr);
+//            cout<<Ptr->data<<endl;
+//          }
+//        }if(Ptr->right_side != NULL){//Step 3
+//          Ptr = (*Ptr).right_side;
+//          privateprint(Ptr);
+//          cout<<Ptr->data<<endl;
+//        }
+}
 
 int main(){
-  Tree a;
+   Tree a;
    a.insert(5);
    a.insert(4);
-   a.insert(3);
    a.insert(2);
    a.print(search);
   return 0;
