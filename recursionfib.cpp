@@ -1,33 +1,43 @@
 #include <iostream>
 using namespace std;
 
-
- int Recursive (int fib);
- // y will be amount of values that will be displayed
-
+ int Recursive (int x);
 
 int main () {
 
-cout << " " << '\n';
+char resp = 'Y';
+int x;
 
-int ans;
-ans = Recursive(2);
- cout << ans << endl;
 
-cout << " " << '\n';
+while ( resp != 'N')
+{
+  cout << "Enter the position in the fibbonaci sequence you wish to view. ";
+  cin >> x;
+
+Recursive(x);
+
+cout<<Recursive(x)<<endl;
+
+cout<<" Would you like to know any other numbers? (Y/N)";
+cin >> resp;
+
+
+}
 
   return 0;
-  }
+}
 
 
- int Recursive (int counter) {
-int fib = 1;
+int Recursive (int x)
+{
 
-int internal_counter = 0;
+if ((x == 1)||(x == 0))
+    {
+  return (x);
+    }
 
-if (counter == internal_counter) {return 1;}
-
-if ( fib == 0) { fib + 1; }
-
-  else { return fib + Recursive (fib-- ); internal_counter + 1;}
+  else
+   {
+    return(Recursive(x-1)+Recursive (x-2));
+    }
 }
